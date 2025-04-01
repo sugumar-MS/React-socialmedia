@@ -1,0 +1,225 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+html{
+  font-size: 16px;
+}
+body{
+  min-height: 100vh;
+  display: flex;
+  background-color: #efefef;
+  
+}
+#root{
+  
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.App{
+  width: 100%;
+  max-width: 800px;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+  border-radius: 10px;
+  border: 1px solid #333;
+  box-shadow: 0px 0px 10px black;
+}
+.Header{
+  width: 100%;
+  padding: 10px;
+  background-color: aqua;
+  text-align: center;
+  border-radius: 7px;
+  outline: none;
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  text-align: center;
+  flex-wrap: wrap;
+}
+.Header h2{
+  flex-grow: 1;
+  display: flex;
+  justify-content: center;
+  
+}
+.Header svg{
+  font-size: 2rem;
+}
+
+.Nav label{
+  position: absolute;
+  left: -99999px;
+}
+.Nav{
+  width: 100%;
+  background-color: #414040;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: flex-start;
+}
+.searchForm{
+  width: 80%;
+  padding: 1rem 0 0 0.75rem;
+}
+.searchForm input[type="text"]{
+  width: 100%;
+  height: 48px;
+  padding: 5px;
+  font-size: 1rem;
+  border-radius: 5px;
+  outline: none;
+}
+.Nav ul{
+  list-style-type: none;
+  display: flex;
+  flex-wrap: nowrap;
+  color: #fff;
+}
+.Nav li{
+  padding: 1rem;
+}
+
+.Nav a li {
+  color: #fff;
+ 
+}
+.Nav a{
+  text-decoration: none;
+}
+.Nav li:hover, 
+.Nav li:focus {
+  background-color: #eee;
+  color: #333;
+}
+
+@media only screen and (min-width:600px){
+  html{
+    font-size: 20px;
+  }
+  .Nav{
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .searchForm{
+    width: 50%;
+    padding: .5rem 0;
+  }
+  .Nav ul{
+    align-items: right;
+  }
+  .searchForm input[type="text"]{
+    margin-left: 0.5rem;
+  }
+}
+.Home, .NewPost, .PostPage, .About, .Missing{
+  width: 100%;
+  flex-grow: 1;
+  padding: 1rem;
+  overflow-y: auto;
+}
+.Post{
+  margin-top: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid#c5bfbf;
+}
+.Post:first-child{
+  margin-top: 0px;
+}
+.Post:last-child{
+  border-bottom: none;
+  
+}
+.postTime{
+  margin-top: 5px;
+  color: #767373;
+  font-size: 0.75rem;
+}
+.postBody{
+  margin-top: 15px;
+}
+.newPostForm{
+  display: flex;
+  flex-direction: column;
+}
+.newPostForm label{
+  margin-top: 1rem;
+}
+.newPostForm input[type="text"],
+.newPostForm textarea{
+  width: 100%;
+  min-height: 48px;
+  font-size: 1rem;
+  padding: 0.25rem;
+  border-radius: 5px;
+  outline: none;
+  /* margin-right: 0.25rem; */
+}
+.newPostForm textarea{
+  height: 100px;
+}
+.newPostForm button {
+  margin-top: 1rem;
+  height: 48px;
+  min-width: 48px;
+  border-radius: 10px;
+  padding: 0.5rem;
+  font-size: 1rem;
+  cursor: pointer;
+  background-color:green;
+  color: #fff;
+}
+.newPostForm button:hover{
+  background-color: rgb(47, 168, 57);
+}
+.Post a{
+  text-decoration: none;
+  color: #000;
+}
+.Missing h2, .PostPage h2,
+.Missing p, .PostPage p {
+  margin-bottom: 1rem;
+}
+.PostPage button {
+  /* background-color: red; */
+  padding: 15px;
+  border-radius: 8px;
+  cursor: pointer;
+  width: 80px;
+  font-size: 18px;
+ 
+}
+.Footer{
+  width: 100%;
+  background-color: aqua;
+  text-align: center;
+  padding: 10px;
+}
+.editButton{
+  background-color: rgb(1, 136, 1);
+  border: none;
+  margin-right: 20px;
+  text-align: center;
+}
+.deleteButton{
+  background-color: red;
+  border: none;
+}
+.editButton:hover{
+ background-color: rgb(4, 102, 4);
+ color: #fff;
+}
+.deleteButton:hover{
+  background-color: rgb(188, 3, 3);
+  color: #fff;
+}
